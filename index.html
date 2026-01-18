@@ -144,19 +144,417 @@
         .hero-image {
             position: relative;
             height: 600px;
-            background: linear-gradient(135deg, #fef8e8 0%, #f9f0d9 50%, #f4e8c8 100%);
+            background:
+                radial-gradient(ellipse at 15% 20%, rgba(220, 230, 225, 0.4) 0%, transparent 40%),
+                radial-gradient(ellipse at 85% 75%, rgba(240, 210, 180, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(245, 230, 200, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, #fef5e4 0%, #fcedc8 30%, #f9e5b8 70%, #f5d89a 100%);
             border-radius: 30px;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .hero-image img {
+        .dental-scene {
+            position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+
+        /* Background shelf */
+        .bg-shelf {
+            position: absolute;
+            left: 5%;
+            top: 12%;
+            width: 200px;
+            height: 140px;
+            background: linear-gradient(135deg, rgba(210, 215, 205, 0.5) 0%, rgba(190, 195, 185, 0.4) 100%);
+            border-radius: 8px;
+            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.1);
+            filter: blur(1.5px);
+        }
+
+        /* Plants on shelf */
+        .plant {
+            position: absolute;
+            filter: blur(1px);
+        }
+
+        .plant1 {
+            left: 7%;
+            top: 18%;
+            width: 45px;
+            height: 65px;
+            background: radial-gradient(ellipse at 50% 30%, rgba(140, 170, 130, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .plant1::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 55px;
+            background: radial-gradient(ellipse at 40% 40%, rgba(120, 155, 110, 0.5) 0%, transparent 60%);
+            border-radius: 50%;
+            left: 10px;
+            top: 5px;
+        }
+
+        .plant2 {
+            left: 11%;
+            top: 20%;
+            width: 40px;
+            height: 55px;
+            background: radial-gradient(ellipse at 50% 35%, rgba(130, 165, 120, 0.55) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+
+        .plant3 {
+            left: 15%;
+            top: 19%;
+            width: 42px;
+            height: 60px;
+            background: radial-gradient(ellipse at 50% 32%, rgba(135, 168, 125, 0.58) 0%, transparent 68%);
+            border-radius: 50%;
+        }
+
+        /* Equipment in background */
+        .bg-equipment {
+            position: absolute;
+            right: 8%;
+            top: 45%;
+            width: 140px;
+            height: 110px;
+            background: linear-gradient(135deg, rgba(180, 185, 180, 0.4) 0%, rgba(160, 165, 160, 0.3) 100%);
+            border-radius: 6px;
+            filter: blur(1.8px);
+            box-shadow: inset -3px -3px 10px rgba(0,0,0,0.08);
+        }
+
+        .bg-equipment::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 20px;
+            width: 30px;
+            height: 20px;
+            background: rgba(230, 220, 200, 0.5);
+            border-radius: 3px;
+        }
+
+        .bg-equipment::after {
+            content: '';
+            position: absolute;
+            right: 35px;
+            top: 20px;
+            width: 35px;
+            height: 20px;
+            background: rgba(230, 220, 200, 0.5);
+            border-radius: 3px;
+        }
+
+        /* Dental light */
+        .dental-light-painting {
+            position: absolute;
+            right: 35%;
+            top: 10%;
+            width: 110px;
+            height: 65px;
+            background:
+                radial-gradient(ellipse at 40% 40%, rgba(255, 250, 235, 0.9) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 60%, rgba(250, 215, 160, 0.7) 0%, transparent 60%),
+                linear-gradient(135deg, #f9d88a 0%, #f5ca70 50%, #e8b855 100%);
+            border-radius: 50%;
+            box-shadow:
+                0 8px 25px rgba(250, 220, 160, 0.6),
+                inset -3px -5px 12px rgba(200, 150, 80, 0.4),
+                inset 3px 3px 10px rgba(255, 250, 220, 0.5);
+            transform: rotate(-5deg);
+            filter: blur(0.5px);
+        }
+
+        .dental-light-painting::before {
+            content: '';
+            position: absolute;
+            top: -55px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 60px;
+            background: linear-gradient(180deg, rgba(170, 160, 145, 0.7) 0%, rgba(150, 140, 125, 0.8) 100%);
+            border-radius: 4px;
+            box-shadow: 2px 0 6px rgba(0,0,0,0.25);
+        }
+
+        .dental-light-painting::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(circle, rgba(160, 150, 135, 0.8) 0%, rgba(140, 130, 115, 0.9) 100%);
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        /* Light glow */
+        .light-glow-painting {
+            position: absolute;
+            right: 32%;
+            top: 13%;
+            width: 130px;
+            height: 200px;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(255, 250, 230, 0.35) 0%, rgba(255, 250, 230, 0.15) 40%, transparent 70%);
+            filter: blur(15px);
+            pointer-events: none;
+        }
+
+        /* Dental chair */
+        .dental-chair-painting {
+            position: absolute;
+            right: 18%;
+            bottom: 18%;
+            width: 240px;
+            height: 140px;
+            background:
+                radial-gradient(ellipse at 35% 35%, rgba(155, 160, 165, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(140, 145, 150, 0.75) 0%, rgba(120, 125, 130, 0.7) 50%, rgba(100, 105, 110, 0.65) 100%);
             border-radius: 30px;
+            transform: rotate(-6deg);
+            box-shadow:
+                -8px 12px 25px rgba(0,0,0,0.25),
+                inset 5px 5px 15px rgba(180, 185, 190, 0.3),
+                inset -5px -5px 15px rgba(80, 85, 90, 0.3);
+            filter: blur(0.8px);
+        }
+
+        .chair-back-painting {
+            position: absolute;
+            left: -25px;
+            bottom: 35px;
+            width: 70px;
+            height: 160px;
+            background:
+                radial-gradient(ellipse at 40% 40%, rgba(140, 145, 150, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(125, 130, 135, 0.75) 0%, rgba(105, 110, 115, 0.7) 50%, rgba(90, 95, 100, 0.65) 100%);
+            border-radius: 20px;
+            box-shadow:
+                -6px 8px 20px rgba(0,0,0,0.3),
+                inset 3px 3px 12px rgba(165, 170, 175, 0.3),
+                inset -3px -3px 12px rgba(75, 80, 85, 0.3);
+            filter: blur(0.8px);
+        }
+
+        .chair-headrest-painting {
+            position: absolute;
+            left: -30px;
+            top: -15px;
+            width: 75px;
+            height: 50px;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(130, 160, 175, 0.6) 0%, transparent 70%),
+                linear-gradient(135deg, rgba(110, 145, 165, 0.7) 0%, rgba(95, 130, 150, 0.65) 100%);
+            border-radius: 20px 20px 12px 12px;
+            box-shadow: inset 0 -4px 10px rgba(0,0,0,0.2);
+            filter: blur(0.7px);
+        }
+
+        /* Patient body */
+        .patient-body-painting {
+            position: absolute;
+            right: 24%;
+            bottom: 25%;
+            width: 160px;
+            height: 95px;
+            background:
+                radial-gradient(ellipse at 40% 35%, rgba(230, 210, 190, 0.5) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 70%, rgba(200, 180, 160, 0.4) 0%, transparent 55%),
+                linear-gradient(135deg, rgba(220, 200, 175, 0.75) 0%, rgba(205, 185, 160, 0.7) 50%, rgba(190, 170, 145, 0.65) 100%);
+            border-radius: 25px;
+            transform: rotate(-8deg);
+            box-shadow:
+                inset -8px -10px 18px rgba(0,0,0,0.15),
+                inset 5px 5px 12px rgba(240, 220, 200, 0.3);
+            filter: blur(0.7px);
+        }
+
+        /* Patient head */
+        .patient-head-painting {
+            position: absolute;
+            right: 40%;
+            bottom: 42%;
+            width: 75px;
+            height: 90px;
+            background:
+                radial-gradient(ellipse at 35% 35%, rgba(235, 195, 160, 0.7) 0%, transparent 65%),
+                radial-gradient(ellipse at 75% 75%, rgba(195, 155, 120, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(225, 185, 150, 0.85) 0%, rgba(210, 170, 135, 0.8) 50%, rgba(195, 155, 120, 0.75) 100%);
+            border-radius: 48% 48% 42% 42%;
+            transform: rotate(-12deg);
+            box-shadow:
+                inset -6px -10px 15px rgba(0,0,0,0.15),
+                inset 4px 4px 10px rgba(245, 205, 170, 0.4),
+                -3px 5px 12px rgba(0,0,0,0.2);
+            filter: blur(0.6px);
+        }
+
+        /* Patient hair */
+        .patient-hair-painting {
+            position: absolute;
+            right: 42%;
+            bottom: 50%;
+            width: 95px;
+            height: 70px;
+            background:
+                radial-gradient(ellipse at 30% 40%, rgba(100, 75, 60, 0.6) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(85, 65, 50, 0.5) 0%, transparent 55%),
+                linear-gradient(145deg, rgba(90, 70, 55, 0.75) 0%, rgba(75, 55, 40, 0.7) 50%, rgba(65, 50, 35, 0.65) 100%);
+            border-radius: 60% 55% 45% 50%;
+            transform: rotate(-15deg);
+            box-shadow: inset -4px -6px 12px rgba(0,0,0,0.3);
+            filter: blur(0.8px);
+        }
+
+        /* Dentist body */
+        .dentist-body-painting {
+            position: absolute;
+            left: 28%;
+            bottom: 22%;
+            width: 130px;
+            height: 180px;
+            background:
+                radial-gradient(ellipse at 40% 30%, rgba(125, 175, 200, 0.6) 0%, transparent 65%),
+                radial-gradient(ellipse at 75% 75%, rgba(85, 135, 165, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(105, 160, 190, 0.85) 0%, rgba(90, 145, 175, 0.8) 50%, rgba(75, 130, 160, 0.75) 100%);
+            border-radius: 35px 35px 15px 15px;
+            box-shadow:
+                inset -10px -14px 20px rgba(0,0,0,0.2),
+                inset 7px 7px 15px rgba(155, 200, 225, 0.3),
+                -4px 6px 15px rgba(0,0,0,0.25);
+            filter: blur(0.7px);
+        }
+
+        /* Dentist head */
+        .dentist-head-painting {
+            position: absolute;
+            left: 30%;
+            bottom: 55%;
+            width: 65px;
+            height: 80px;
+            background:
+                radial-gradient(ellipse at 35% 35%, rgba(225, 185, 150, 0.7) 0%, transparent 65%),
+                radial-gradient(ellipse at 75% 75%, rgba(195, 155, 120, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(215, 175, 140, 0.85) 0%, rgba(200, 160, 125, 0.8) 50%, rgba(185, 145, 110, 0.75) 100%);
+            border-radius: 48% 48% 42% 42%;
+            transform: rotate(8deg);
+            box-shadow:
+                inset -6px -10px 15px rgba(0,0,0,0.15),
+                inset 4px 4px 10px rgba(235, 195, 160, 0.4),
+                -3px 5px 12px rgba(0,0,0,0.2);
+            filter: blur(0.6px);
+        }
+
+        /* Dentist hair bun */
+        .dentist-hair-painting {
+            position: absolute;
+            left: 32%;
+            bottom: 62%;
+            width: 55px;
+            height: 45px;
+            background:
+                radial-gradient(ellipse at 40% 40%, rgba(75, 60, 50, 0.7) 0%, transparent 65%),
+                radial-gradient(ellipse at 70% 60%, rgba(60, 48, 38, 0.6) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(70, 55, 45, 0.85) 0%, rgba(60, 48, 38, 0.8) 50%, rgba(50, 40, 30, 0.75) 100%);
+            border-radius: 50%;
+            box-shadow: inset -4px -6px 12px rgba(0,0,0,0.35);
+            filter: blur(0.7px);
+        }
+
+        /* Dentist mask */
+        .dentist-mask-painting {
+            position: absolute;
+            left: 29%;
+            bottom: 52%;
+            width: 55px;
+            height: 30px;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(120, 175, 200, 0.6) 0%, transparent 70%),
+                linear-gradient(135deg, rgba(105, 165, 195, 0.8) 0%, rgba(90, 150, 180, 0.75) 100%);
+            border-radius: 12px;
+            box-shadow:
+                inset 0 -3px 8px rgba(0,0,0,0.15),
+                0 2px 6px rgba(0,0,0,0.2);
+            filter: blur(0.5px);
+            transform: rotate(8deg);
+        }
+
+        /* Dentist arm */
+        .dentist-arm-painting {
+            position: absolute;
+            left: 38%;
+            bottom: 38%;
+            width: 90px;
+            height: 28px;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(125, 175, 200, 0.6) 0%, transparent 65%),
+                linear-gradient(90deg, rgba(105, 160, 190, 0.8) 0%, rgba(90, 145, 175, 0.75) 100%);
+            border-radius: 14px;
+            transform: rotate(-20deg);
+            box-shadow:
+                inset -3px -4px 10px rgba(0,0,0,0.2),
+                0 3px 8px rgba(0,0,0,0.2);
+            filter: blur(0.6px);
+        }
+
+        /* Dentist hand */
+        .dentist-hand-painting {
+            position: absolute;
+            left: 47%;
+            bottom: 42%;
+            width: 30px;
+            height: 38px;
+            background:
+                radial-gradient(ellipse at 40% 40%, rgba(225, 185, 150, 0.7) 0%, transparent 65%),
+                linear-gradient(135deg, rgba(215, 175, 140, 0.85) 0%, rgba(200, 160, 125, 0.8) 100%);
+            border-radius: 45% 45% 40% 40%;
+            transform: rotate(-15deg);
+            box-shadow:
+                inset -3px -5px 10px rgba(0,0,0,0.15),
+                0 2px 6px rgba(0,0,0,0.2);
+            filter: blur(0.5px);
+        }
+
+        /* Dental tool */
+        .dental-tool-painting {
+            position: absolute;
+            left: 49%;
+            bottom: 45%;
+            width: 55px;
+            height: 6px;
+            background:
+                linear-gradient(90deg, rgba(185, 185, 175, 0.85) 0%, rgba(200, 200, 190, 0.9) 50%, rgba(180, 180, 170, 0.85) 100%);
+            border-radius: 3px;
+            transform: rotate(10deg);
+            box-shadow:
+                2px 2px 5px rgba(0,0,0,0.3),
+                inset 0 1px 3px rgba(220, 220, 210, 0.5);
+            filter: blur(0.3px);
+        }
+
+        .dental-tool-painting::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -3px;
+            width: 12px;
+            height: 12px;
+            background:
+                radial-gradient(circle, rgba(195, 195, 185, 0.9) 0%, rgba(175, 175, 165, 0.85) 100%);
+            border-radius: 60% 40%;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
         }
 
         /* Dentist - digital watercolor style */
@@ -988,84 +1386,39 @@
             <a href="#contact" class="btn-primary">Book Appointment →</a>
         </div>
         <div class="hero-image">
-            <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" style="position: absolute; top: 0; left: 0;">
-                <defs>
-                    <filter id="watercolor">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise"/>
-                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
-                        <feGaussianBlur stdDeviation="1.5" />
-                    </filter>
-                </defs>
+            <div class="dental-scene">
+                <!-- Background elements -->
+                <div class="bg-shelf"></div>
+                <div class="plant plant1"></div>
+                <div class="plant plant2"></div>
+                <div class="plant plant3"></div>
+                <div class="bg-equipment"></div>
 
-                <!-- Background warm gradient -->
-                <rect width="800" height="600" fill="url(#warmBg)"/>
-                <defs>
-                    <linearGradient id="warmBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#fef5e7;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#fcedc4;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#f9e2a8;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-
-                <!-- Background elements - shelf with plants -->
-                <rect x="50" y="80" width="180" height="120" fill="#d4d8d0" opacity="0.4" filter="url(#watercolor)" rx="5"/>
-                <ellipse cx="100" cy="130" rx="25" ry="35" fill="#7a9b6e" opacity="0.5" filter="url(#watercolor)"/>
-                <ellipse cx="130" cy="125" rx="20" ry="30" fill="#6b8c5f" opacity="0.5" filter="url(#watercolor)"/>
-                <ellipse cx="160" cy="135" rx="22" ry="32" fill="#7a9b6e" opacity="0.5" filter="url(#watercolor)"/>
-
-                <!-- Dental light -->
-                <ellipse cx="450" cy="100" rx="60" ry="35" fill="#f9d574" opacity="0.8" filter="url(#watercolor)"/>
-                <ellipse cx="450" cy="100" rx="50" ry="28" fill="#fce8a8" opacity="0.9"/>
-                <line x1="450" y1="100" x2="450" y2="40" stroke="#9a9a8a" stroke-width="6" opacity="0.6" filter="url(#watercolor)"/>
-                <ellipse cx="450" cy="100" rx="35" ry="22" fill="#fff9e6" opacity="0.7"/>
-
-                <!-- Light glow -->
-                <ellipse cx="450" cy="180" rx="80" ry="100" fill="#fef8e0" opacity="0.3" filter="url(#watercolor)"/>
+                <!-- Dental light and glow -->
+                <div class="light-glow-painting"></div>
+                <div class="dental-light-painting"></div>
 
                 <!-- Dental chair -->
-                <rect x="380" y="350" width="200" height="100" fill="#8a9199" opacity="0.7" filter="url(#watercolor)" rx="20" transform="rotate(-5 480 400)"/>
-                <rect x="365" y="320" width="60" height="140" fill="#7a8189" opacity="0.7" filter="url(#watercolor)" rx="15" transform="rotate(-5 395 390)"/>
-                <rect x="365" y="300" width="65" height="40" fill="#6b9aae" opacity="0.6" filter="url(#watercolor)" rx="12" transform="rotate(-5 397 320)"/>
+                <div class="dental-chair-painting">
+                    <div class="chair-back-painting">
+                        <div class="chair-headrest-painting"></div>
+                    </div>
+                </div>
 
-                <!-- Patient body -->
-                <ellipse cx="470" cy="380" rx="95" ry="55" fill="#d4c4a8" opacity="0.6" filter="url(#watercolor)" transform="rotate(-8 470 380)"/>
-                <ellipse cx="470" cy="380" rx="85" ry="45" fill="#c9b89d" opacity="0.5" filter="url(#watercolor)" transform="rotate(-8 470 380)"/>
+                <!-- Patient -->
+                <div class="patient-body-painting"></div>
+                <div class="patient-head-painting"></div>
+                <div class="patient-hair-painting"></div>
 
-                <!-- Patient head -->
-                <ellipse cx="420" cy="280" rx="45" ry="55" fill="#d9a574" opacity="0.8" filter="url(#watercolor)" transform="rotate(-10 420 280)"/>
-                <ellipse cx="420" cy="280" rx="38" ry="48" fill="#c9956a" opacity="0.6" filter="url(#watercolor)" transform="rotate(-10 420 280)"/>
-
-                <!-- Patient hair -->
-                <path d="M 395 245 Q 380 250 375 265 Q 370 280 375 295 L 385 250 Z" fill="#6b554a" opacity="0.7" filter="url(#watercolor)"/>
-                <path d="M 420 235 Q 440 235 455 245 Q 460 255 458 268 L 440 240 Z" fill="#5a473d" opacity="0.7" filter="url(#watercolor)"/>
-
-                <!-- Dentist body -->
-                <ellipse cx="280" cy="340" rx="55" ry="85" fill="#5a92b4" opacity="0.8" filter="url(#watercolor)"/>
-                <ellipse cx="280" cy="340" rx="48" ry="75" fill="#6ba3c9" opacity="0.6" filter="url(#watercolor)"/>
-
-                <!-- Dentist head -->
-                <ellipse cx="260" cy="240" rx="40" ry="50" fill="#c9956a" opacity="0.8" filter="url(#watercolor)"/>
-                <ellipse cx="260" cy="240" rx="35" ry="45" fill="#d9a574" opacity="0.6" filter="url(#watercolor)"/>
-
-                <!-- Dentist hair bun -->
-                <ellipse cx="275" cy="210" rx="25" ry="20" fill="#5a473d" opacity="0.8" filter="url(#watercolor)"/>
-                <ellipse cx="275" cy="210" rx="20" ry="16" fill="#6b554a" opacity="0.6" filter="url(#watercolor)"/>
-
-                <!-- Dentist mask -->
-                <rect x="240" y="255" width="40" height="25" fill="#6ba3c9" opacity="0.7" filter="url(#watercolor)" rx="8"/>
-
-                <!-- Dentist arm -->
-                <ellipse cx="320" cy="300" rx="18" ry="65" fill="#5a92b4" opacity="0.7" filter="url(#watercolor)" transform="rotate(-25 320 300)"/>
-
-                <!-- Dentist hand and tool -->
-                <ellipse cx="370" cy="270" rx="15" ry="20" fill="#d9a574" opacity="0.7" filter="url(#watercolor)" transform="rotate(-15 370 270)"/>
-                <line x1="385" y1="265" x2="415" y2="275" stroke="#b0b0a0" stroke-width="4" opacity="0.8" filter="url(#watercolor)"/>
-
-                <!-- Counter/equipment in background -->
-                <rect x="550" y="300" width="120" height="80" fill="#a4a8a0" opacity="0.3" filter="url(#watercolor)" rx="5"/>
-                <rect x="570" y="310" width="25" height="15" fill="#e8d8c4" opacity="0.4" filter="url(#watercolor)" rx="2"/>
-                <rect x="605" y="310" width="25" height="15" fill="#e8d8c4" opacity="0.4" filter="url(#watercolor)" rx="2"/>
-            </svg>
+                <!-- Dentist -->
+                <div class="dentist-body-painting"></div>
+                <div class="dentist-head-painting"></div>
+                <div class="dentist-hair-painting"></div>
+                <div class="dentist-mask-painting"></div>
+                <div class="dentist-arm-painting"></div>
+                <div class="dentist-hand-painting"></div>
+                <div class="dental-tool-painting"></div>
+            </div>
             <div class="floating-card card-1">
                 <div class="card-icon">🪥</div>
                 <div class="card-title">Dental Cleaning</div>
