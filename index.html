@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental & Medical Clinic in Barking - Professional Dental Care</title>
+    <meta name="description" content="Professional dental and medical clinic in Barking offering comprehensive dental services including check-ups, cosmetic dentistry, and emergency care.">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            color: #3498db;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        .nav-btn {
+            background: #1a1a1a;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 100vh;
+            padding: 120px 40px 80px;
+            background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: #1a1a1a;
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f0f0 100%);
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+
+        .card-1 {
+            top: 10%;
+            right: -10%;
+            width: 180px;
+        }
+
+        .card-2 {
+            bottom: 15%;
+            left: -10%;
+            width: 200px;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '+';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .stat-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .stat-card:nth-child(2) {
+            background: #1a1a1a;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 40px;
+            background: #fafafa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #3498db;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 40px;
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .feature-item h4 {
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .about-image {
+            height: 500px;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f0f0 100%);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 40px;
+            background: #fafafa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .testimonial-text {
+            color: #555;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: #1a1a1a;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .stars {
+            color: #ffa500;
+            font-size: 0.85rem;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 100px 40px;
+            background: white;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .location-card {
+            background: #fafafa;
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .location-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .info-icon {
+            font-size: 1.8rem;
+        }
+
+        .location-card p {
+            color: #555;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .time {
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 40px;
+            background: #fafafa;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h4 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 3rem 40px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 100px 30px 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-card {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            nav ul li:not(:last-child) {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+
+        /* Scroll Offset for Fixed Nav */
+        section {
+            scroll-margin-top: 90px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo"><span class="logo-icon">🦷</span> Dental & Medical Clinic</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact" class="nav-btn">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">DENTAL CARE</div>
+            <h1>A Healthy Smile Starts Here</h1>
+            <p>A smooth and hassle-free dental care experience for a healthy and confident smile. Expert care you can trust in Barking.</p>
+            <a href="#contact" class="btn-primary">Book Appointment →</a>
+        </div>
+        <div class="hero-image">
+            😁
+            <div class="floating-card card-1">
+                <div class="card-icon">🪥</div>
+                <div class="card-title">Dental Cleaning</div>
+                <div class="card-text">Professional care for your smile</div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">✨</div>
+                <div class="card-title">Teeth Whitening</div>
+                <div class="card-text">Brighter, confident smile</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">80%</div>
+            <div class="stat-description">Exclusive Member Savings: Save 30% - 80% on Dental Procedures, Including Oral Exams, Cleanings, and X-Rays.</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">40%</div>
+            <div class="stat-description">Enhanced Member Benefits: Save 40% on All Other Dental Services, Including Cosmetic, Restorative, and Specialty Dental Procedures.</div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">OUR WORKS</div>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive dental care tailored to your needs with modern technology and expert professionals</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🔍</span>
+                    <h3>Dental Check-Up</h3>
+                    <p>Comprehensive oral examination and professional cleaning</p>
+                    <div class="price">From £45</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">✨</span>
+                    <h3>Teeth Whitening</h3>
+                    <p>Professional whitening for a brighter, confident smile</p>
+                    <div class="price">From £250</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🦷</span>
+                    <h3>Fillings & Repairs</h3>
+                    <p>Composite and amalgam fillings for cavities and damage</p>
+                    <div class="price">From £85</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">👑</span>
+                    <h3>Crowns & Bridges</h3>
+                    <p>Restore damaged teeth with custom-made crowns</p>
+                    <div class="price">From £450</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🪥</span>
+                    <h3>Hygienist Services</h3>
+                    <p>Professional cleaning and gum disease prevention</p>
+                    <div class="price">From £65</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🚨</span>
+                    <h3>Emergency Dental</h3>
+                    <p>Same-day appointments for urgent dental problems</p>
+                    <div class="price">From £95</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">😁</span>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Veneers, bonding, and smile makeovers</p>
+                    <div class="price">From £350</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🦴</span>
+                    <h3>Root Canal Treatment</h3>
+                    <p>Save infected teeth with expert endodontic care</p>
+                    <div class="price">From £350</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🔧</span>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent tooth replacement solution</p>
+                    <div class="price">From £1,800</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-label">001 — ABOUT US</div>
+                    <h2>Professional And Compassionate Care</h2>
+                    <p>Welcome to Dental & Medical Clinic in Barking, where we've been serving our community with excellence for over 15 years. Our state-of-the-art facility combines modern technology with compassionate care.</p>
+                    <p>Our experienced team ensures a comfortable, stress-free visit. We believe everyone deserves a healthy, beautiful smile, and we work with you to achieve your oral health goals.</p>
+                </div>
+                <div class="about-image">
+                    👨‍⚕️
+                </div>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">👨‍⚕️</span>
+                    <h4>Expert Team</h4>
+                    <p>GDC registered dentists</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🏥</span>
+                    <h4>Modern Facilities</h4>
+                    <p>State-of-the-art equipment</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💳</span>
+                    <h4>Flexible Payment</h4>
+                    <p>Finance options available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">TESTIMONIALS</div>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-subtitle">Real reviews from our valued patients</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Absolutely brilliant service! I was terrified of dentists but the team here made me feel so comfortable. The clinic is spotless and the staff are incredibly professional. Couldn't recommend them highly enough."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "I had an emergency dental issue and they saw me the same day. The dentist was gentle, explained everything clearly, and sorted my problem quickly. Great value for money and excellent care."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JK</div>
+                        <div class="author-info">
+                            <h4>James Kumar</h4>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Been coming here for years with my whole family. The children love visiting because the staff are so friendly and patient. Prices are fair and they always fit us in when we need appointments."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <h4>Linda Patterson</h4>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">FIND US</div>
+                <h2 class="section-title">Visit Us</h2>
+                <p class="section-subtitle">Located in the heart of Barking, easily accessible</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3><span class="info-icon">📍</span> Our Location</h3>
+                    <p><strong>Dental & Medical Clinic</strong></p>
+                    <p>123 Ripple Road</p>
+                    <p>Barking</p>
+                    <p>Essex, IG11 7PG</p>
+                    <p style="margin-top: 1.5rem; color: #666;">5 minutes walk from Barking Station</p>
+                </div>
+
+                <div class="location-card">
+                    <h3><span class="info-icon">🕐</span> Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Tuesday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Wednesday</span>
+                            <span class="time">9:00 AM - 8:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Thursday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Friday</span>
+                            <span class="time">9:00 AM - 5:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday</span>
+                            <span class="time">9:00 AM - 2:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday</span>
+                            <span class="time">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">GET IN TOUCH</div>
+                <h2 class="section-title">Book Your Appointment</h2>
+                <p class="section-subtitle">Contact us today to schedule your visit</p>
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4>Call Us</h4>
+                    <a href="tel:02085947700">020 8594 7700</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h4>Email Us</h4>
+                    <a href="mailto:info@dentalbarking.co.uk">info@dentalbarking.co.uk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dental & Medical Clinic in Barking. All rights reserved.</p>
+            <p>GDC Registered | Professional dental care you can trust</p>
+        </div>
+    </footer>
+</body>
+</html>
