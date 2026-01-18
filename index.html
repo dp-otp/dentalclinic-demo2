@@ -146,34 +146,17 @@
             height: 600px;
             background: linear-gradient(135deg, #fef8e8 0%, #f9f0d9 50%, #f4e8c8 100%);
             border-radius: 30px;
-            overflow: visible;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(ellipse at 20% 30%, rgba(200, 220, 230, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(230, 200, 180, 0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(240, 230, 200, 0.4) 0%, transparent 70%);
-            border-radius: 30px;
-            pointer-events: none;
-        }
-
-        .dentist-illustration {
+        .hero-image img {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            filter: saturate(0.85) contrast(0.9);
+            object-fit: cover;
+            border-radius: 30px;
         }
 
         /* Dentist - digital watercolor style */
@@ -1005,38 +988,7 @@
             <a href="#contact" class="btn-primary">Book Appointment →</a>
         </div>
         <div class="hero-image">
-            <div class="dentist-illustration">
-                <div class="dentist">
-                    <div class="dentist-head"></div>
-                    <div class="dentist-neck"></div>
-                    <div class="dentist-shoulder-left"></div>
-                    <div class="dentist-shoulder-right"></div>
-                    <div class="dentist-body"></div>
-                    <div class="dentist-arm-right"></div>
-                    <div class="dentist-hand"></div>
-                    <div class="dentist-tool">
-                        <div class="tool-tip"></div>
-                    </div>
-                </div>
-                <div class="patient">
-                    <div class="dental-chair">
-                        <div class="chair-back">
-                            <div class="chair-headrest"></div>
-                        </div>
-                        <div class="chair-cushion"></div>
-                    </div>
-                    <div class="patient-head"></div>
-                    <div class="patient-neck"></div>
-                    <div class="patient-body"></div>
-                    <div class="patient-arm"></div>
-                </div>
-                <div class="dental-light">
-                    <div class="light-arm">
-                        <div class="light-joint"></div>
-                    </div>
-                </div>
-                <div class="light-glow"></div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop" alt="Dentist treating patient in modern clinic" style="filter: saturate(0.9) brightness(1.05);" />
             <div class="floating-card card-1">
                 <div class="card-icon">🪥</div>
                 <div class="card-title">Dental Cleaning</div>
