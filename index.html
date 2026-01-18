@@ -988,7 +988,84 @@
             <a href="#contact" class="btn-primary">Book Appointment →</a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop" alt="Dentist treating patient in modern clinic" style="filter: saturate(0.9) brightness(1.05);" />
+            <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" style="position: absolute; top: 0; left: 0;">
+                <defs>
+                    <filter id="watercolor">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise"/>
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+                        <feGaussianBlur stdDeviation="1.5" />
+                    </filter>
+                </defs>
+
+                <!-- Background warm gradient -->
+                <rect width="800" height="600" fill="url(#warmBg)"/>
+                <defs>
+                    <linearGradient id="warmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#fef5e7;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#fcedc4;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f9e2a8;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Background elements - shelf with plants -->
+                <rect x="50" y="80" width="180" height="120" fill="#d4d8d0" opacity="0.4" filter="url(#watercolor)" rx="5"/>
+                <ellipse cx="100" cy="130" rx="25" ry="35" fill="#7a9b6e" opacity="0.5" filter="url(#watercolor)"/>
+                <ellipse cx="130" cy="125" rx="20" ry="30" fill="#6b8c5f" opacity="0.5" filter="url(#watercolor)"/>
+                <ellipse cx="160" cy="135" rx="22" ry="32" fill="#7a9b6e" opacity="0.5" filter="url(#watercolor)"/>
+
+                <!-- Dental light -->
+                <ellipse cx="450" cy="100" rx="60" ry="35" fill="#f9d574" opacity="0.8" filter="url(#watercolor)"/>
+                <ellipse cx="450" cy="100" rx="50" ry="28" fill="#fce8a8" opacity="0.9"/>
+                <line x1="450" y1="100" x2="450" y2="40" stroke="#9a9a8a" stroke-width="6" opacity="0.6" filter="url(#watercolor)"/>
+                <ellipse cx="450" cy="100" rx="35" ry="22" fill="#fff9e6" opacity="0.7"/>
+
+                <!-- Light glow -->
+                <ellipse cx="450" cy="180" rx="80" ry="100" fill="#fef8e0" opacity="0.3" filter="url(#watercolor)"/>
+
+                <!-- Dental chair -->
+                <rect x="380" y="350" width="200" height="100" fill="#8a9199" opacity="0.7" filter="url(#watercolor)" rx="20" transform="rotate(-5 480 400)"/>
+                <rect x="365" y="320" width="60" height="140" fill="#7a8189" opacity="0.7" filter="url(#watercolor)" rx="15" transform="rotate(-5 395 390)"/>
+                <rect x="365" y="300" width="65" height="40" fill="#6b9aae" opacity="0.6" filter="url(#watercolor)" rx="12" transform="rotate(-5 397 320)"/>
+
+                <!-- Patient body -->
+                <ellipse cx="470" cy="380" rx="95" ry="55" fill="#d4c4a8" opacity="0.6" filter="url(#watercolor)" transform="rotate(-8 470 380)"/>
+                <ellipse cx="470" cy="380" rx="85" ry="45" fill="#c9b89d" opacity="0.5" filter="url(#watercolor)" transform="rotate(-8 470 380)"/>
+
+                <!-- Patient head -->
+                <ellipse cx="420" cy="280" rx="45" ry="55" fill="#d9a574" opacity="0.8" filter="url(#watercolor)" transform="rotate(-10 420 280)"/>
+                <ellipse cx="420" cy="280" rx="38" ry="48" fill="#c9956a" opacity="0.6" filter="url(#watercolor)" transform="rotate(-10 420 280)"/>
+
+                <!-- Patient hair -->
+                <path d="M 395 245 Q 380 250 375 265 Q 370 280 375 295 L 385 250 Z" fill="#6b554a" opacity="0.7" filter="url(#watercolor)"/>
+                <path d="M 420 235 Q 440 235 455 245 Q 460 255 458 268 L 440 240 Z" fill="#5a473d" opacity="0.7" filter="url(#watercolor)"/>
+
+                <!-- Dentist body -->
+                <ellipse cx="280" cy="340" rx="55" ry="85" fill="#5a92b4" opacity="0.8" filter="url(#watercolor)"/>
+                <ellipse cx="280" cy="340" rx="48" ry="75" fill="#6ba3c9" opacity="0.6" filter="url(#watercolor)"/>
+
+                <!-- Dentist head -->
+                <ellipse cx="260" cy="240" rx="40" ry="50" fill="#c9956a" opacity="0.8" filter="url(#watercolor)"/>
+                <ellipse cx="260" cy="240" rx="35" ry="45" fill="#d9a574" opacity="0.6" filter="url(#watercolor)"/>
+
+                <!-- Dentist hair bun -->
+                <ellipse cx="275" cy="210" rx="25" ry="20" fill="#5a473d" opacity="0.8" filter="url(#watercolor)"/>
+                <ellipse cx="275" cy="210" rx="20" ry="16" fill="#6b554a" opacity="0.6" filter="url(#watercolor)"/>
+
+                <!-- Dentist mask -->
+                <rect x="240" y="255" width="40" height="25" fill="#6ba3c9" opacity="0.7" filter="url(#watercolor)" rx="8"/>
+
+                <!-- Dentist arm -->
+                <ellipse cx="320" cy="300" rx="18" ry="65" fill="#5a92b4" opacity="0.7" filter="url(#watercolor)" transform="rotate(-25 320 300)"/>
+
+                <!-- Dentist hand and tool -->
+                <ellipse cx="370" cy="270" rx="15" ry="20" fill="#d9a574" opacity="0.7" filter="url(#watercolor)" transform="rotate(-15 370 270)"/>
+                <line x1="385" y1="265" x2="415" y2="275" stroke="#b0b0a0" stroke-width="4" opacity="0.8" filter="url(#watercolor)"/>
+
+                <!-- Counter/equipment in background -->
+                <rect x="550" y="300" width="120" height="80" fill="#a4a8a0" opacity="0.3" filter="url(#watercolor)" rx="5"/>
+                <rect x="570" y="310" width="25" height="15" fill="#e8d8c4" opacity="0.4" filter="url(#watercolor)" rx="2"/>
+                <rect x="605" y="310" width="25" height="15" fill="#e8d8c4" opacity="0.4" filter="url(#watercolor)" rx="2"/>
+            </svg>
             <div class="floating-card card-1">
                 <div class="card-icon">🪥</div>
                 <div class="card-title">Dental Cleaning</div>
