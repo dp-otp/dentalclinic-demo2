@@ -150,7 +150,176 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 8rem;
+        }
+
+        .dentist-illustration {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        /* Dentist */
+        .dentist {
+            position: absolute;
+            left: 50px;
+            bottom: 100px;
+            width: 80px;
+            height: 120px;
+        }
+
+        .dentist-head {
+            width: 40px;
+            height: 40px;
+            background: #f4a460;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .dentist-mask {
+            width: 30px;
+            height: 15px;
+            background: #4a90e2;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            border-radius: 5px;
+        }
+
+        .dentist-cap {
+            width: 45px;
+            height: 20px;
+            background: #4a90e2;
+            position: absolute;
+            top: -5px;
+            left: 17px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .dentist-body {
+            width: 60px;
+            height: 70px;
+            background: #87ceeb;
+            position: absolute;
+            top: 45px;
+            left: 10px;
+            border-radius: 10px;
+        }
+
+        .dentist-arm {
+            width: 45px;
+            height: 12px;
+            background: #87ceeb;
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            border-radius: 6px;
+            transform: rotate(-30deg);
+        }
+
+        .dentist-tool {
+            width: 30px;
+            height: 4px;
+            background: #c0c0c0;
+            position: absolute;
+            top: 55px;
+            left: 90px;
+            border-radius: 2px;
+        }
+
+        .tool-tip {
+            width: 8px;
+            height: 8px;
+            background: #silver;
+            position: absolute;
+            right: -8px;
+            top: -2px;
+            border-radius: 50%;
+        }
+
+        /* Patient */
+        .patient {
+            position: absolute;
+            right: 50px;
+            bottom: 100px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .dental-chair {
+            width: 120px;
+            height: 80px;
+            background: #d3d3d3;
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            border-radius: 15px;
+            transform: rotate(-10deg);
+        }
+
+        .chair-back {
+            width: 40px;
+            height: 100px;
+            background: #c0c0c0;
+            position: absolute;
+            left: -10px;
+            bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .patient-head {
+            width: 35px;
+            height: 35px;
+            background: #f4a460;
+            border-radius: 50%;
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+        }
+
+        .patient-mouth {
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 50%;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+
+        .patient-body {
+            width: 80px;
+            height: 50px;
+            background: #98d8c8;
+            position: absolute;
+            right: 40px;
+            bottom: 25px;
+            border-radius: 10px;
+            transform: rotate(-10deg);
+        }
+
+        /* Dental light */
+        .dental-light {
+            width: 60px;
+            height: 40px;
+            background: #fff;
+            border: 3px solid #888;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+            box-shadow: 0 5px 20px rgba(255,255,255,0.8);
+        }
+
+        .light-arm {
+            width: 4px;
+            height: 60px;
+            background: #888;
+            position: absolute;
+            top: -60px;
+            right: 28px;
         }
 
         .floating-card {
@@ -691,7 +860,30 @@
             <a href="#contact" class="btn-primary">Book Appointment →</a>
         </div>
         <div class="hero-image">
-            😁
+            <div class="dentist-illustration">
+                <div class="dentist">
+                    <div class="dentist-cap"></div>
+                    <div class="dentist-head"></div>
+                    <div class="dentist-mask"></div>
+                    <div class="dentist-body"></div>
+                    <div class="dentist-arm"></div>
+                    <div class="dentist-tool">
+                        <div class="tool-tip"></div>
+                    </div>
+                </div>
+                <div class="patient">
+                    <div class="dental-chair">
+                        <div class="chair-back"></div>
+                    </div>
+                    <div class="patient-head">
+                        <div class="patient-mouth"></div>
+                    </div>
+                    <div class="patient-body"></div>
+                </div>
+                <div class="dental-light">
+                    <div class="light-arm"></div>
+                </div>
+            </div>
             <div class="floating-card card-1">
                 <div class="card-icon">🪥</div>
                 <div class="card-title">Dental Cleaning</div>
@@ -949,7 +1141,7 @@
                 <div class="contact-card">
                     <div class="contact-icon">📞</div>
                     <h4>Call Us</h4>
-                    <a href="tel:02085947700">020 8594 7700</a>
+                    <a href="tel:02085947700">020 8597 2845</a>
                 </div>
 
                 <div class="contact-card">
