@@ -153,173 +153,263 @@
         }
 
         .dentist-illustration {
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             position: relative;
+            filter: contrast(0.95) brightness(1.05);
         }
 
-        /* Dentist */
+        /* Dentist - painting style */
         .dentist {
             position: absolute;
-            left: 50px;
-            bottom: 100px;
-            width: 80px;
-            height: 120px;
+            left: 30px;
+            bottom: 80px;
+            width: 120px;
+            height: 200px;
         }
 
         .dentist-head {
-            width: 40px;
-            height: 40px;
-            background: #f4a460;
-            border-radius: 50%;
+            width: 55px;
+            height: 65px;
+            background: linear-gradient(135deg, #d4a574 0%, #c39463 60%, #b8845a 100%);
+            border-radius: 45% 45% 40% 40%;
             position: absolute;
             top: 0;
-            left: 20px;
+            left: 32px;
+            box-shadow: inset -5px -8px 12px rgba(0,0,0,0.15);
         }
 
-        .dentist-mask {
-            width: 30px;
-            height: 15px;
-            background: #4a90e2;
+        .dentist-neck {
+            width: 28px;
+            height: 25px;
+            background: linear-gradient(180deg, #c39463 0%, #b8845a 100%);
             position: absolute;
-            top: 25px;
-            left: 25px;
-            border-radius: 5px;
-        }
-
-        .dentist-cap {
-            width: 45px;
-            height: 20px;
-            background: #4a90e2;
-            position: absolute;
-            top: -5px;
-            left: 17px;
-            border-radius: 10px 10px 0 0;
+            top: 60px;
+            left: 46px;
         }
 
         .dentist-body {
-            width: 60px;
-            height: 70px;
-            background: #87ceeb;
+            width: 90px;
+            height: 110px;
+            background: linear-gradient(135deg, #6ba3d4 0%, #5892c4 50%, #4a7fb5 100%);
             position: absolute;
-            top: 45px;
-            left: 10px;
-            border-radius: 10px;
+            top: 80px;
+            left: 15px;
+            border-radius: 25px 25px 5px 5px;
+            box-shadow: inset -8px -10px 15px rgba(0,0,0,0.2), inset 5px 5px 10px rgba(255,255,255,0.15);
         }
 
-        .dentist-arm {
+        .dentist-shoulder-left {
             width: 45px;
-            height: 12px;
-            background: #87ceeb;
+            height: 35px;
+            background: linear-gradient(125deg, #5892c4 0%, #4a7fb5 100%);
             position: absolute;
-            top: 60px;
-            left: 50px;
-            border-radius: 6px;
-            transform: rotate(-30deg);
+            top: 85px;
+            left: 10px;
+            border-radius: 20px 5px 10px 5px;
+            transform: rotate(-15deg);
+        }
+
+        .dentist-shoulder-right {
+            width: 45px;
+            height: 35px;
+            background: linear-gradient(55deg, #6ba3d4 0%, #5892c4 100%);
+            position: absolute;
+            top: 85px;
+            right: 10px;
+            border-radius: 5px 20px 5px 10px;
+            transform: rotate(15deg);
+        }
+
+        .dentist-arm-right {
+            width: 65px;
+            height: 22px;
+            background: linear-gradient(90deg, #6ba3d4 0%, #5892c4 100%);
+            position: absolute;
+            top: 105px;
+            left: 90px;
+            border-radius: 11px;
+            transform: rotate(-25deg);
+            box-shadow: inset -3px -3px 8px rgba(0,0,0,0.2);
+        }
+
+        .dentist-hand {
+            width: 22px;
+            height: 28px;
+            background: linear-gradient(135deg, #d4a574 0%, #c39463 100%);
+            position: absolute;
+            top: 100px;
+            left: 145px;
+            border-radius: 40% 40% 35% 35%;
+            box-shadow: inset -2px -3px 6px rgba(0,0,0,0.15);
         }
 
         .dentist-tool {
-            width: 30px;
-            height: 4px;
-            background: #c0c0c0;
+            width: 45px;
+            height: 6px;
+            background: linear-gradient(90deg, #b8b8b8 0%, #d4d4d4 50%, #a8a8a8 100%);
             position: absolute;
-            top: 55px;
-            left: 90px;
-            border-radius: 2px;
+            top: 110px;
+            left: 160px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .tool-tip {
-            width: 8px;
-            height: 8px;
-            background: #silver;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, #c8c8c8 0%, #a0a0a0 100%);
             position: absolute;
-            right: -8px;
-            top: -2px;
-            border-radius: 50%;
+            right: -10px;
+            top: -3px;
+            border-radius: 60% 40% 60% 40%;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
 
-        /* Patient */
+        /* Patient - painting style */
         .patient {
             position: absolute;
             right: 50px;
             bottom: 100px;
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140px;
         }
 
         .dental-chair {
-            width: 120px;
-            height: 80px;
-            background: #d3d3d3;
+            width: 150px;
+            height: 90px;
+            background: linear-gradient(135deg, #b8b8b8 0%, #9a9a9a 50%, #858585 100%);
             position: absolute;
             bottom: 0;
-            right: 30px;
+            right: 20px;
+            border-radius: 25px;
+            transform: rotate(-8deg);
+            box-shadow: -5px 8px 15px rgba(0,0,0,0.3), inset 3px 3px 8px rgba(255,255,255,0.2);
+        }
+
+        .chair-cushion {
+            width: 130px;
+            height: 25px;
+            background: linear-gradient(180deg, #7a9eb5 0%, #6890aa 100%);
+            position: absolute;
+            top: 10px;
+            left: 10px;
             border-radius: 15px;
-            transform: rotate(-10deg);
+            box-shadow: inset 0 -3px 8px rgba(0,0,0,0.2);
         }
 
         .chair-back {
-            width: 40px;
-            height: 100px;
-            background: #c0c0c0;
+            width: 50px;
+            height: 120px;
+            background: linear-gradient(90deg, #9a9a9a 0%, #858585 50%, #707070 100%);
             position: absolute;
-            left: -10px;
-            bottom: 20px;
-            border-radius: 10px;
+            left: -15px;
+            bottom: 25px;
+            border-radius: 15px;
+            box-shadow: -3px 5px 12px rgba(0,0,0,0.3), inset 2px 2px 6px rgba(255,255,255,0.15);
+        }
+
+        .chair-headrest {
+            width: 55px;
+            height: 35px;
+            background: linear-gradient(135deg, #7a9eb5 0%, #6890aa 100%);
+            position: absolute;
+            left: -18px;
+            top: -5px;
+            border-radius: 15px 15px 8px 8px;
+            box-shadow: inset 0 -2px 6px rgba(0,0,0,0.2);
         }
 
         .patient-head {
-            width: 35px;
-            height: 35px;
-            background: #f4a460;
-            border-radius: 50%;
+            width: 50px;
+            height: 60px;
+            background: linear-gradient(135deg, #c99f7a 0%, #b88f6a 60%, #a87f5a 100%);
+            border-radius: 45% 45% 38% 38%;
             position: absolute;
-            right: 60px;
-            bottom: 60px;
+            right: 65px;
+            bottom: 95px;
+            transform: rotate(-8deg);
+            box-shadow: inset -4px -6px 10px rgba(0,0,0,0.15);
         }
 
-        .patient-mouth {
-            width: 15px;
-            height: 15px;
-            background: #fff;
-            border: 2px solid #333;
-            border-radius: 50%;
+        .patient-neck {
+            width: 25px;
+            height: 20px;
+            background: linear-gradient(180deg, #b88f6a 0%, #a87f5a 100%);
             position: absolute;
-            right: 5px;
-            bottom: 5px;
+            right: 77px;
+            bottom: 80px;
+            transform: rotate(-8deg);
         }
 
         .patient-body {
-            width: 80px;
-            height: 50px;
-            background: #98d8c8;
+            width: 100px;
+            height: 65px;
+            background: linear-gradient(135deg, #85b8a5 0%, #75a895 50%, #659885 100%);
             position: absolute;
             right: 40px;
-            bottom: 25px;
-            border-radius: 10px;
-            transform: rotate(-10deg);
+            bottom: 35px;
+            border-radius: 20px;
+            transform: rotate(-8deg);
+            box-shadow: inset -6px -8px 12px rgba(0,0,0,0.2), inset 4px 4px 8px rgba(255,255,255,0.1);
         }
 
-        /* Dental light */
+        .patient-arm {
+            width: 55px;
+            height: 20px;
+            background: linear-gradient(90deg, #85b8a5 0%, #75a895 100%);
+            position: absolute;
+            right: 25px;
+            bottom: 50px;
+            border-radius: 10px;
+            transform: rotate(15deg);
+            box-shadow: inset -2px -3px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Dental light - painting style */
         .dental-light {
-            width: 60px;
-            height: 40px;
-            background: #fff;
-            border: 3px solid #888;
+            width: 80px;
+            height: 50px;
+            background: radial-gradient(ellipse at center, #ffffff 0%, #f5f5f5 40%, #d8d8d8 100%);
+            border: 4px solid #707070;
             border-radius: 50%;
             position: absolute;
-            top: 20px;
-            right: 100px;
-            box-shadow: 0 5px 20px rgba(255,255,255,0.8);
+            top: 30px;
+            right: 120px;
+            box-shadow: 0 8px 25px rgba(255,255,255,0.9), inset 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .light-glow {
+            width: 70px;
+            height: 90px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+            position: absolute;
+            top: 80px;
+            right: 125px;
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .light-arm {
-            width: 4px;
-            height: 60px;
-            background: #888;
+            width: 6px;
+            height: 80px;
+            background: linear-gradient(180deg, #707070 0%, #858585 50%, #707070 100%);
             position: absolute;
-            top: -60px;
-            right: 28px;
+            top: -80px;
+            right: 37px;
+            border-radius: 3px;
+            box-shadow: 2px 0 6px rgba(0,0,0,0.3);
+        }
+
+        .light-joint {
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, #858585 0%, #707070 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: -85px;
+            right: 31px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
         }
 
         .floating-card {
@@ -862,27 +952,35 @@
         <div class="hero-image">
             <div class="dentist-illustration">
                 <div class="dentist">
-                    <div class="dentist-cap"></div>
                     <div class="dentist-head"></div>
-                    <div class="dentist-mask"></div>
+                    <div class="dentist-neck"></div>
+                    <div class="dentist-shoulder-left"></div>
+                    <div class="dentist-shoulder-right"></div>
                     <div class="dentist-body"></div>
-                    <div class="dentist-arm"></div>
+                    <div class="dentist-arm-right"></div>
+                    <div class="dentist-hand"></div>
                     <div class="dentist-tool">
                         <div class="tool-tip"></div>
                     </div>
                 </div>
                 <div class="patient">
                     <div class="dental-chair">
-                        <div class="chair-back"></div>
+                        <div class="chair-back">
+                            <div class="chair-headrest"></div>
+                        </div>
+                        <div class="chair-cushion"></div>
                     </div>
-                    <div class="patient-head">
-                        <div class="patient-mouth"></div>
-                    </div>
+                    <div class="patient-head"></div>
+                    <div class="patient-neck"></div>
                     <div class="patient-body"></div>
+                    <div class="patient-arm"></div>
                 </div>
                 <div class="dental-light">
-                    <div class="light-arm"></div>
+                    <div class="light-arm">
+                        <div class="light-joint"></div>
+                    </div>
                 </div>
+                <div class="light-glow"></div>
             </div>
             <div class="floating-card card-1">
                 <div class="card-icon">🪥</div>
