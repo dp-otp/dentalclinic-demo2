@@ -144,22 +144,37 @@
         .hero-image {
             position: relative;
             height: 600px;
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f0f0 100%);
+            background: linear-gradient(135deg, #fef8e8 0%, #f9f0d9 50%, #f4e8c8 100%);
             border-radius: 30px;
-            overflow: hidden;
+            overflow: visible;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .dentist-illustration {
-            width: 450px;
-            height: 450px;
-            position: relative;
-            filter: contrast(0.95) brightness(1.05);
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(200, 220, 230, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(230, 200, 180, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(240, 230, 200, 0.4) 0%, transparent 70%);
+            border-radius: 30px;
+            pointer-events: none;
         }
 
-        /* Dentist - painting style */
+        .dentist-illustration {
+            width: 480px;
+            height: 450px;
+            position: relative;
+            filter: saturate(0.85) contrast(0.9);
+        }
+
+        /* Dentist - digital watercolor style */
         .dentist {
             position: absolute;
             left: 30px;
@@ -170,13 +185,20 @@
 
         .dentist-head {
             width: 55px;
-            height: 65px;
-            background: linear-gradient(135deg, #d4a574 0%, #c39463 60%, #b8845a 100%);
-            border-radius: 45% 45% 40% 40%;
+            height: 68px;
+            background:
+                radial-gradient(ellipse at 30% 30%, #d9b088 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 70%, rgba(160, 100, 70, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #d4a574 0%, #c39463 50%, #b8845a 100%);
+            border-radius: 48% 48% 42% 42%;
             position: absolute;
             top: 0;
             left: 32px;
-            box-shadow: inset -5px -8px 12px rgba(0,0,0,0.15);
+            box-shadow:
+                inset -6px -10px 15px rgba(0,0,0,0.12),
+                inset 4px 4px 8px rgba(255,255,255,0.3),
+                -2px 3px 8px rgba(0,0,0,0.15);
+            filter: blur(0.3px);
         }
 
         .dentist-neck {
@@ -191,12 +213,19 @@
         .dentist-body {
             width: 90px;
             height: 110px;
-            background: linear-gradient(135deg, #6ba3d4 0%, #5892c4 50%, #4a7fb5 100%);
+            background:
+                radial-gradient(ellipse at 40% 30%, rgba(130, 180, 210, 0.6) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(70, 120, 160, 0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #6ba3d4 0%, #5892c4 50%, #4a7fb5 100%);
             position: absolute;
             top: 80px;
             left: 15px;
             border-radius: 25px 25px 5px 5px;
-            box-shadow: inset -8px -10px 15px rgba(0,0,0,0.2), inset 5px 5px 10px rgba(255,255,255,0.15);
+            box-shadow:
+                inset -10px -12px 18px rgba(0,0,0,0.18),
+                inset 6px 6px 12px rgba(255,255,255,0.2),
+                -3px 4px 10px rgba(0,0,0,0.2);
+            filter: blur(0.4px);
         }
 
         .dentist-shoulder-left {
@@ -278,13 +307,20 @@
         .dental-chair {
             width: 150px;
             height: 90px;
-            background: linear-gradient(135deg, #b8b8b8 0%, #9a9a9a 50%, #858585 100%);
+            background:
+                radial-gradient(ellipse at 40% 40%, rgba(200, 200, 200, 0.6) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(110, 110, 110, 0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #b8b8b8 0%, #9a9a9a 50%, #858585 100%);
             position: absolute;
             bottom: 0;
             right: 20px;
             border-radius: 25px;
             transform: rotate(-8deg);
-            box-shadow: -5px 8px 15px rgba(0,0,0,0.3), inset 3px 3px 8px rgba(255,255,255,0.2);
+            box-shadow:
+                -6px 10px 18px rgba(0,0,0,0.28),
+                inset 4px 4px 10px rgba(255,255,255,0.25),
+                inset -3px -3px 8px rgba(0,0,0,0.15);
+            filter: blur(0.5px);
         }
 
         .chair-cushion {
@@ -322,14 +358,21 @@
 
         .patient-head {
             width: 50px;
-            height: 60px;
-            background: linear-gradient(135deg, #c99f7a 0%, #b88f6a 60%, #a87f5a 100%);
-            border-radius: 45% 45% 38% 38%;
+            height: 62px;
+            background:
+                radial-gradient(ellipse at 35% 35%, #d4ab8a 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 75%, rgba(140, 100, 75, 0.35) 0%, transparent 50%),
+                linear-gradient(135deg, #c99f7a 0%, #b88f6a 60%, #a87f5a 100%);
+            border-radius: 48% 48% 40% 40%;
             position: absolute;
             right: 65px;
             bottom: 95px;
             transform: rotate(-8deg);
-            box-shadow: inset -4px -6px 10px rgba(0,0,0,0.15);
+            box-shadow:
+                inset -5px -8px 12px rgba(0,0,0,0.14),
+                inset 3px 3px 8px rgba(255,255,255,0.25),
+                -2px 3px 8px rgba(0,0,0,0.18);
+            filter: blur(0.3px);
         }
 
         .patient-neck {
@@ -345,13 +388,20 @@
         .patient-body {
             width: 100px;
             height: 65px;
-            background: linear-gradient(135deg, #85b8a5 0%, #75a895 50%, #659885 100%);
+            background:
+                radial-gradient(ellipse at 35% 30%, rgba(150, 200, 180, 0.5) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 75%, rgba(90, 140, 125, 0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #85b8a5 0%, #75a895 50%, #659885 100%);
             position: absolute;
             right: 40px;
             bottom: 35px;
             border-radius: 20px;
             transform: rotate(-8deg);
-            box-shadow: inset -6px -8px 12px rgba(0,0,0,0.2), inset 4px 4px 8px rgba(255,255,255,0.1);
+            box-shadow:
+                inset -8px -10px 14px rgba(0,0,0,0.18),
+                inset 5px 5px 10px rgba(255,255,255,0.15),
+                -3px 4px 10px rgba(0,0,0,0.2);
+            filter: blur(0.4px);
         }
 
         .patient-arm {
@@ -366,28 +416,38 @@
             box-shadow: inset -2px -3px 6px rgba(0,0,0,0.15);
         }
 
-        /* Dental light - painting style */
+        /* Dental light - digital watercolor */
         .dental-light {
-            width: 80px;
-            height: 50px;
-            background: radial-gradient(ellipse at center, #ffffff 0%, #f5f5f5 40%, #d8d8d8 100%);
-            border: 4px solid #707070;
+            width: 85px;
+            height: 52px;
+            background:
+                radial-gradient(ellipse at 35% 35%, rgba(255,255,255,0.9) 0%, transparent 50%),
+                radial-gradient(ellipse at center, #ffffff 0%, #f8f8f8 35%, #e8e8e8 70%, #d8d8d8 100%);
+            border: 4px solid #888;
             border-radius: 50%;
             position: absolute;
             top: 30px;
             right: 120px;
-            box-shadow: 0 8px 25px rgba(255,255,255,0.9), inset 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow:
+                0 10px 30px rgba(255, 250, 220, 0.8),
+                0 5px 15px rgba(255,255,255,0.6),
+                inset 0 3px 10px rgba(0,0,0,0.08),
+                inset -2px -2px 8px rgba(0,0,0,0.15);
+            filter: blur(0.3px);
         }
 
         .light-glow {
-            width: 70px;
-            height: 90px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+            width: 85px;
+            height: 110px;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(255,250,220,0.5) 0%, rgba(255,250,220,0.2) 40%, transparent 70%),
+                linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,240,0.15) 50%, transparent 100%);
             position: absolute;
             top: 80px;
-            right: 125px;
+            right: 120px;
             border-radius: 50%;
             pointer-events: none;
+            filter: blur(3px);
         }
 
         .light-arm {
